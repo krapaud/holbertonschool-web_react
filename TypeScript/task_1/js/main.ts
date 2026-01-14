@@ -8,8 +8,8 @@ interface Teacher {
 }
 
 const teacher1: Teacher = {
-    firstName: 'Samia',
-    lastName: 'Chelaoua',
+    firstName: 'Remi',
+    lastName: 'Marcais',
     fullTimeEmployee: true,
     yearsOfExperience: 2,
     location: 'Marseille',
@@ -37,4 +37,12 @@ const teachers: Teacher[] = [teacher1, teacher2];
 
     studentTable.appendChild(list);
 });
-document.body.appendChild(studentTable);  
+document.body.appendChild(studentTable);
+
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    return `${firstName[0]}. ${lastName}`;
+};
