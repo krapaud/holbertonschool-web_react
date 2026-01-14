@@ -29,11 +29,11 @@ const teacher2: Teacher = {
 console.log(teacher2);
 
 const director1: Directors = {
-    firstName: 'Julien',
-    lastName: 'Cyr',
+    firstName: 'Samia',
+    lastName: 'Chelaoua',
     fullTimeEmployee: true,
     yearsOfExperience: 8,
-    location: 'Paris',
+    location: 'Marseille',
     numberOfReports: 17,
 }
 console.log(director1);
@@ -45,3 +45,32 @@ interface printTeacherFunction {
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
     return `${firstName[0]}. ${lastName}`;
 };
+
+interface StudentClassConstructor {
+    new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+interface StudentClassInterface {
+    firstName: string;
+    lastName: string;
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+class StudentClass implements StudentClassInterface {
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework(): string {
+        return 'Currently working';
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
