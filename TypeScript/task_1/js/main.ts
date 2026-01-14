@@ -7,6 +7,10 @@ interface Teacher {
     [key: string]: any;
 }
 
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
 const teacher1: Teacher = {
     firstName: 'Remi',
     lastName: 'Marcais',
@@ -16,28 +20,23 @@ const teacher1: Teacher = {
 }
 
 const teacher2: Teacher = {
-    firstName: 'Rami',
-    lastName: 'Rima',
+    firstName: 'Remi',
+    lastName: 'Marcais',
     fullTimeEmployee: false,
-    yearsOfExperience: 1,
-    location: 'Paris',
+    location: 'Laval',
+    contract: false,
 }
+console.log(teacher2);
 
-const teachers: Teacher[] = [teacher1, teacher2];
-
-    const studentTable = document.createElement('table');
-    teachers.forEach(teacher => {
-        const list = document.createElement('tr');
-        const nameRow = document.createElement('td');
-        const locationRow = document.createElement('td');
-        nameRow.textContent = `${teacher.firstName}`;
-        locationRow.textContent = `${teacher.location}`;
-        list.appendChild(nameRow);
-        list.appendChild(locationRow);
-
-    studentTable.appendChild(list);
-});
-document.body.appendChild(studentTable);
+const director1: Directors = {
+    firstName: 'Julien',
+    lastName: 'Cyr',
+    fullTimeEmployee: true,
+    yearsOfExperience: 8,
+    location: 'Paris',
+    numberOfReports: 17,
+}
+console.log(director1);
 
 interface printTeacherFunction {
     (firstName: string, lastName: string): string;
