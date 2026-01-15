@@ -1,1 +1,1 @@
-console.log('Task 4: Namespace & Declaration merging');
+console.log('Task 4: Hello World!');
