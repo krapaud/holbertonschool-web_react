@@ -20,10 +20,10 @@ const teacher1: Teacher = {
 }
 
 const teacher2: Teacher = {
-    firstName: 'Remi',
-    lastName: 'Marcais',
+    firstName: 'Rami',
+    lastName: 'Rima',
     fullTimeEmployee: false,
-    location: 'Laval',
+    location: 'Paris',
     contract: false,
 }
 console.log(teacher2);
